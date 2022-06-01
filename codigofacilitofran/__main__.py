@@ -1,7 +1,19 @@
+import logging
+
 from codigofacilitofran import unreleased
-import codigofacilitofran
+
+logging.basicConfig(level=logging.DEBUG)
+
 if __name__=='__main__':
-    print("Estamos comenzando la ejecución del paquete")
+    """
+        INFO ->10
+        DEBUG ->20
+        WARNING ->30
+        ERROR   ->40
+        CRITICAL ->50
+
+    """
+    logging.debug("Estamos comenzando la ejecución del paquete")
     workshops=unreleased()
-    print(workshops)
-    print("Estamos finalizando la ejecución del paquete")
+    logging.debug(workshops)
+    logging.debug("Estamos finalizando la ejecución del paquete")
